@@ -3,7 +3,7 @@ pipeline {
 	stages {
 	    stage('Build & Test') {
             steps {
-               echo 'Getting Private Repo'
+               sh 'mvn -Dmaven.test.failure.ignore clean package'
             }
 	    }
     }
